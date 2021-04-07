@@ -19,6 +19,7 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with Solfec. If not, see <http://www.gnu.org/licenses/>. */
 
+#include <limits.h>
 #include <string.h>
 #include "alg.h"
 #include "dom.h"

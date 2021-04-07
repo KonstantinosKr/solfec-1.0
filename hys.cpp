@@ -28,7 +28,7 @@ SOFTWARE.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "parmec8.h"
+//#include "parmec8.h"
 
 extern "C" { /* C */
 

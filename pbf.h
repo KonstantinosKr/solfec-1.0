@@ -23,7 +23,6 @@
 #define __pbf__
 
 #if HDF5 /* FIXME new implementation FIXME */
-
 #include <hdf5.h>
 #include <hdf5_hl.h>
 
@@ -150,7 +149,7 @@ typedef struct pbf PBF; /* file type */
 struct pbf_marker
 {
   double time; /* time moment */
-  u_int ipos; /* index position */
+  int ipos; /* index position */
   uint64_t doff; /* data offset */
 };
 
@@ -159,7 +158,7 @@ struct pbf_label
 {
   char *name; /* label name */
   int index; /* unique index */
-  u_int dpos; /* data position */
+  int dpos; /* data position */
 };
 
 /* access mode */
@@ -182,7 +181,7 @@ struct pbf
       x_idx, /* index stream */
       x_lab; /* labels stream */
   char *mem; /* read/write memory */
-  u_int membase, /* memory base */
+  int membase, /* memory base */
 	memsize; /* memory size */
   MEM mappool, /* map items pool */
       labpool; /* labels pool */
@@ -190,7 +189,7 @@ struct pbf
   MAP *labels; /* name mapped labels */
   PBF_MARKER *mtab; /* markers */
   int lsize; /* free index (WRITE) or ltab size (READ) */
-  u_int msize, /* mtab size (READ) */
+  int msize, /* mtab size (READ) */
         cur; /* index of current time frame */
   double time; /* current time */
   PBF_FLG compression; /* compression flag */

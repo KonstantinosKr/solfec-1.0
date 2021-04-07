@@ -60,4 +60,7 @@ sv = PENALTY_SOLVER ('EXPLICIT')
 
 OUTPUT (solfec, 0.02)
 
-RUN (solfec, sv, 2.0)
+
+MBFCP_EXPORT(solfec, "./out/hopper/hopper.mbfcp")
+#RUN (solfec, sv, 2.0)
+

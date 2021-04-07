@@ -58,7 +58,7 @@ POSIX = yes
 # HDF5
 #
 
-HDF5 = yes
+HDF5 = no
 
 HDF5INC = -I/opt/local/include
 HDF5LIB = -L/opt/local/lib -lhdf5 -lhdf5_hl
@@ -67,7 +67,7 @@ HDF5LIB = -L/opt/local/lib -lhdf5 -lhdf5_hl
 # XDR (must be set when HDF5 = no)
 #
 
-XDR = no
+XDR = yes
 
 XDRINC = 
 XDRLIB = 
@@ -117,14 +117,14 @@ VBO = yes
 # MPI (yes/no)
 #
 
-MPI = yes
+MPI = no
 MPICC = mpicc
 
 #
 # Zoltan load balancer (MPI = yes); optional
 #
 
-ZOLTAN = no
+ZOLTAN = yes
 ZOLTANINC = -I/usr/local/include
 ZOLTANLIB = -L/usr/local/lib -lzoltan
 
@@ -144,7 +144,7 @@ DYNLB = ../dynlb
 # If not required can be left as empty;
 #
 
-PARMEC = ../parmec
+#PARMEC = ../parmec
 
 #
 # MED paths (this need to be specified if PARMEC
